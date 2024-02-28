@@ -14,8 +14,12 @@ Description of all program's variables:
 
 | variable name | variable description |
 | ------------- | -------------------- |
-| table | it's a table which stores all 'X's and 'O's. In order to win, all values of its cells must be 'X' signs |
-| row | integer, it's used to iterate through all the table rows |
-| column | integer, it's used to iterate through all the table columns |
-| amountOfX | integer, stores the amount of 'X's on the table in a certain round |
-| comparisonOutcomes | dictionary, 
+| table | It's a table which stores all 'X's and 'O's. In order to win, all values of its cells must be 'X' signs |
+| row | Integer, it's used to iterate through all the table rows |
+| column | Integer, it's used to iterate through all the table columns |
+| amountOfX | Integer, stores the amount of 'X's on the table in a certain round |
+| comparisonOutcomes | Dictionary, its keys are ranges of possible amounts of 'X' table cells and its values are strings saying if amounts of 'X' cells from a certain range result in victory (0-80: no, 81 and more: yes) |
+| amountRange | Tuples which are keys in comparisonOutcomes dictionary |
+| outcome | Strings which are values in comparisonOutcomes dictionary |
+| userMove | String, it's a double digit number which stores coordinates of the cell which valuie user wants to replace (first digit means number of the row, second digit means number of the column) |
+| XaxisPlacing | Integer, 
