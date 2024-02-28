@@ -9,7 +9,7 @@ def checkIfVictory(table):
     for row in range(9):
         for column in range(9):
             if table[row][column] == 'X':
-                amountOfX = amountOfX = 1
+                amountOfX = amountOfX + 1
     for amountRange, outcome in comparisonOutcomes.items():
         if amountRange[0] <= amountOfX <= amountRange[1]:
             return outcome
@@ -20,30 +20,43 @@ def takeUserMove():
         raise ValueError
     return userMove
 
+def modifyTable(table, userMove, XaxisPlacing, YaxisPlacing, tableValues):
+    if int(userMove[0])-YaxisPlacing < 0 or int(userMove[1])-XaxisPlacing < 0:
+        return 
+    try:
+        table[int(userMove[0])-YaxisPlacing][int(userMove[1])-XaxisPlacing] = tableValues[table[int(userMove[0])-YaxisPlacing][int(userMove[1])-XaxisPlacing]]
+    except IndexError:
+        return
+
 def main():
-    table = [
-    ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
-    ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
-    ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
-    ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
-    ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
-    ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
-    ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
-    ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
-    ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
-    ]
-    tableValues = {'X': 'O', 'O': 'X'}
-    victory = "no"
-    while victory == "no":
-        userMove = takeUserMove()
-        table[int(userMove[0])-1][int(userMove[1])-1] = tableValues[table[int(userMove[0])-1][int(userMove[1])-1]]
-        table[int(userMove[0])-2][int(userMove[1])-1] = tableValues[table[int(userMove[0])-2][int(userMove[1])-1]]
-        table[int(userMove[0])-1][int(userMove[1])] = tableValues[table[int(userMove[0])-1][int(userMove[1])]]
-        table[int(userMove[0])][int(userMove[1])-1] = tableValues[table[int(userMove[0])][int(userMove[1])-1]]
-        table[int(userMove[0])-1][int(userMove[1])-2] = tableValues[table[int(userMove[0])-1][int(userMove[1])-2]]
-        printTable(table)
-        victory = checkIfVictory(table)
-    print("victory")
+    try:
+        table = [
+        ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'],
+        ]
+        tableValues = {'X': 'O', 'O': 'X'}
+        victory = "no"
+        turn = 0
+        while victory == "no":
+            turn = turn+1
+            userMove = takeUserMove()
+            modifyTable(table, userMove, 1, 1, tableValues)
+            modifyTable(table, userMove, 2, 1, tableValues)
+            modifyTable(table, userMove, 1, 0, tableValues)
+            modifyTable(table, userMove, 0, 1, tableValues)
+            modifyTable(table, userMove, 1, 2, tableValues)
+            printTable(table)
+            victory = checkIfVictory(table)
+        print("victory!\nYou managed to set all the table cells as 'X' in {} rounds".format(turn))
+    except ValueError:
+        print("Error: invalid data in the input")
 
 if __name__ == "__main__":
     main()	
