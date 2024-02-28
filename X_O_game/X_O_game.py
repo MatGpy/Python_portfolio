@@ -20,11 +20,11 @@ def takeUserMove():
         raise ValueError
     return userMove
 
-def modifyTable(table, userMove, XaxisPlacing, YaxisPlacing, tableValues):
-    if int(userMove[0])-YaxisPlacing < 0 or int(userMove[1])-XaxisPlacing < 0:
+def modifyTable(table, userMove, XaxisPlacement, YaxisPlacement, tableValues):
+    if int(userMove[0])-YaxisPlacement < 0 or int(userMove[1])-XaxisPlacement < 0:
         return 
     try:
-        table[int(userMove[0])-YaxisPlacing][int(userMove[1])-XaxisPlacing] = tableValues[table[int(userMove[0])-YaxisPlacing][int(userMove[1])-XaxisPlacing]]
+        table[int(userMove[0])-YaxisPlacement][int(userMove[1])-XaxisPlacement] = tableValues[table[int(userMove[0])-YaxisPlacement][int(userMove[1])-XaxisPlacement]]
     except IndexError:
         return
 
