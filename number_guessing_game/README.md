@@ -8,6 +8,8 @@ Firstly, program randomly chooses the value of three integers - guessedNumber (n
 
 How to use this program?
 
+If user uses linux device:
+
 In order to use this program, user simply has to type 'python3 number_guessing_game.py' into the terminal while being in directory where this program is located on user's device. Then, user has to choose level of difficulty and inform the program whether they want a hint. After these steps, user has specified amount of attempts to guess value of the guessed number.
 
 Description of all program's variables:
