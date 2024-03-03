@@ -3,13 +3,16 @@ loan_installments_calculator - documentation
 This program's purpose is creating the table with payment plan for user's loan based on information such as amount of user's loan, interest rate, bank's commission and user's preferred period of payment (in months). Program calculates amount of every installment based on EMI formula (more information at the end of the documentation).
 
 How does this program work?
+
 Firstly, this program takes data about user's loan from the user (date when loan was taken, commision of the bank, interest rate, amount of months user wants to pay their loan in). Then, based on provided data, program calculates amount of every installment using EMI formula (installments aren't equal because of varying WIBOR rate for every month) and once amounts of all installments are calculated, program calculates the average amount of all rates and uses this value as an amount of installment user has to pay every month (our goal was to make all the installments equal). After calculating average amount of all installments (which also is a final amount of every installment), program creates the table where information about all installments amounts and dates of paying these installments are present and displays this table to the user.
 
 How to use this program?
+
+If user uses linux device:
+
 In order to use this program, user simply has to type 'python3 loan_installments_calculator.py' into the terminal while being in directory where this program is located on user's device and then insert all necessary data about their loan. After these steps, table with the payment plan will be displayed. Disclaimer - in order to use this program, user has to download python rich package on their device.
 
 Description of all program's variables:
-
 
 | variable name | description |
 | ------------- | ----------- |
