@@ -8,6 +8,8 @@ This program asks user to insert their height (in centimeters) and weight (in ki
 
 How to use this program?
 
+If user uses linux device:
+
 In order to use this program, user simply has to type 'python3 BMI_calculator.py' into the terminal while being in directory where this program is located on user's device and then insert all the necessary data. After all these steps, program will display user's BMI.
 
 Description of all program's variables:
