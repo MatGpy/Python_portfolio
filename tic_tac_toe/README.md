@@ -8,6 +8,8 @@ Firstly, this program asks user which sign (x or o) they want to play as, define
 
 How to use this program?
 
+If user uses linux device:
+
 In order to use this program, user simply has to type 'python3 tic_tac_toe.py' into the terminal while being in directory where this program is located on user's device. After this step, user has to choose a sign they want to use during the game and then, with every turn, user has to choose coordinates of the table field where they want to put their sign.
 
 Description of all program's variables:
