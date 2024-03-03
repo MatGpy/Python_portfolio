@@ -8,6 +8,8 @@ Firstly, this program asks user for amount of questions they want the quiz to ha
 
 How to use this program?
 
+If user uses linux device:
+
 In order to use this program, user simply has to type 'python3 EU_cities_quiz.py' into the terminal while being in directory where this program is located on user's device. Then, user simply has to insert amount of questions they want to answer and answer all of them (disclaimer: all cities' names should be written with first letter uppercase). Then, after user answered all the questions, quiz summary is displayed.
 
 Description of all program's variables:
