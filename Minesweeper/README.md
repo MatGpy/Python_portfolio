@@ -8,6 +8,8 @@ Firstly, this program creates two tables - mainTable and displayedTable (mainTab
 
 How to use this program?
 
+If user uses linux device:
+
 In order to use this program, user simply has to type 'python3 minesweeper.py' into the terminal while being in directory where this program is located on user's device. Then, user has to specify the level of difficulty they want to play with and then the game begins - program will repeatedly show user current state of the table and ask user about table cell they want to uncover until user's victory or defeat.
 
 Description of all program's variables:
