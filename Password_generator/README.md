@@ -8,6 +8,8 @@ Firstly, this program takes amount of characters which generated password should
 
 How to use this program?
 
+If user uses linux device:
+
 In order to use this program, user simply has to type 'python3 Password_generator.py' into the terminal while being in directory where this program is located on user's device. Then, user has to insert amount of characters which generated password should have and then program will display generated password.
 
 Description of all program's variables:
