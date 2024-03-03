@@ -8,6 +8,8 @@ Firstly, this program takes name and location of the csv file where data about e
 
 How to use this program?
 
+If user uses linux device:
+
 In order to use this program, user simply has to type 'python3 employee_wages_calculator.py' into the terminal while being in directory where this program is located on user's device. Then, user has to insert name and location of the csv file with employees' data on their device and after it's done, program will create OutputFile.csv in the directory where this program is saved on user's device and inform user about it.
 
 Description of all program's variables:
