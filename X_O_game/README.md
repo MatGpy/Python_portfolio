@@ -8,6 +8,8 @@ Firstly, this program displays initial state of the table (where all cells' valu
 
 How to use this program?
 
+If user uses linux device:
+
 In order to use this program, user simply has to type 'python3 X_O_game.py' into the terminal while being in directory where this program is located on user's device. Then, user has to repeatedly insert coordinates of the cell which value they want to replace (together with 4 cells congruent to that cell) every turn, until they'll manage to replace all table cells' values with 'X' signs.
 
 Description of all program's variables:
