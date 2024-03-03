@@ -26,7 +26,7 @@ def takeProgramMove(table):
         programMoveColumn = random.randint(1,3)
     return programMoveRow, programMoveColumn
 
-def checkVictory(table, userSign, programSign):
+def checkVictory(table, userSign, programSign, userVictory, programVictory):
     if table[0][0] == table[0][1] == table[0][2] == userSign or table[1][0] == table[1][1] == table[1][2] == userSign or table[2][0] == table[2][1] == table[2][2] == userSign or table[0][0] == table[1][1] == table[2][2] == userSign or table[0][2] == table[1][1] == table[2][0] == userSign or table[0][0] == table[1][0] == table[2][0] == userSign or table[0][1] == table[1][1] == table[2][1] == userSign or table[0][2] == table[1][2] == table[2][2] == userSign:
         userVictory = 1
     if table[0][0] == table[0][1] == table[0][2] == programSign or table[1][0] == table[1][1] == table[1][2] == programSign or table[2][0] == table[2][1] == table[2][2] == programSign or table[0][0] == table[1][1] == table[2][2] == programSign or table[0][2] == table[1][1] == table[2][0] == programSign or table[0][0] == table[1][0] == table[2][0] == programSign or table[0][1] == table[1][1] == table[2][1] == programSign or table[0][2] == table[1][2] == table[2][2] == programSign:
@@ -57,10 +57,7 @@ def main():
             print("program's move:")
             printTable(table)
             occupatedFields = occupatedFields+1
-            if occupatedFields == 9:
-                print("the end")
-                break
-            userVictory, programVictory = checkVictory(table, userSign, programSign)
+            userVictory, programVictory = checkVictory(table, userSign, programSign, userVictory, programVictory)
             if userVictory+programVictory == 1:
                 if userVictory == 1:
                     print("you win")
@@ -74,7 +71,7 @@ def main():
             if userVictory+programVictory == 2:
                 print("draw")
                 break
-            if occupatedFields > 9:
+            if occupatedFields >= 9 and userVictory+programVictory == 0:
                 print("the end")
                 break
     except (ValueError, IndexError):
