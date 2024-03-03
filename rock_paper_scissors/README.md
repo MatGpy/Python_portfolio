@@ -8,6 +8,8 @@ Firstly, user has to choose their move (rock, paper or scissors). Then, program 
 
 How to use this program?
 
+If user uses linux device:
+
 In order to use this program, user simply has to type 'python3 rock_paper_scissors.py' into the terminal while being in directory where this program is located on user's device. Then, user has to insert their move (rock, paper or scissors) into the specified field. After these steps, results of rock paper scissors game between user and the program will be displayed.
 
 Description of all program's variables:
