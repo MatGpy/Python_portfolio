@@ -26,7 +26,7 @@ def calculateWage(contractType, baseWage, overtimeHourlyWage, overtimeHours, hou
     return wage
     
 def takeInputLocation():
-    inputFileLocation = str(input("Insert location of the file where employees' data are stored: "))
+    inputFileLocation = str(input("Insert location of the file where employees' data are stored and name of this file: "))
     return inputFileLocation
 
 def readInputFile(reader, inputFileTable, inputFile):
@@ -75,7 +75,7 @@ def main():
         with open('./OutputFile.csv', 'w', newline='') as outputFile:
             writer = csv.writer(outputFile, delimiter=',')
             writeOutputFile(writer, wagesTable, employeesCount)
-    except (FileNotFoundError, IsADirectoryError):
+    except (FileNotFoundError, IsADirectoryError, PermissionError):
         print("Error: file provided by the user or file location provided by the user is invalid")
     else:
         print("Output file (OutputFile.csv) has been successfully created")
