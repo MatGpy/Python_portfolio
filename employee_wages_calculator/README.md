@@ -8,15 +8,15 @@ Firstly, this program takes name and location of the csv file where data about e
 
 **How to use this program?**
 
-If user uses linux device:
+If user uses Linux device:
 
 In order to use this program, user has to open terminal, change directory to the location where this program is saved on user's device and type 'python3 employee_wages_calculator.py'. Then, user has to insert name and location of the csv file with employees' data on their device and after it's done, program will create OutputFile.csv in the directory where this program is saved on user's device and inform user about it.
 
-If user uses windows device:
+If user uses Windows device:
 
 In order to use this program, user has to open employee_wages_calculator.py file with Python IDE of their choice (for example Visual Studio Code) and run it (for example, you can run the file in Visual Studio Code by pressing a triangle on the top right side of the window). Then, user has to insert the location and name of their input csv file.
 
-Alternatively, user can run this file using windows powershell - then, process of running the program is similar to running the program on linux device: user has to change directory to the location where this program is saved on their device and type 'python3 employee_wages_calculator.py' into the terminal. After these steps, user can use this program.
+Alternatively, user can run this file using Windows Powershell - then, process of running the program is similar to running the program on linux device: user has to change directory to the location where this program is saved on their device and type 'python3 employee_wages_calculator.py' into the terminal. After these steps, user can use this program.
 
 **Description of all program's variables:**
 

@@ -8,15 +8,15 @@ Firstly, this program asks user which sign (x or o) they want to play as, define
 
 **How to use this program?**
 
-If user uses linux device:
+If user uses Linux device:
 
 In order to use this program, user has to open terminal, change directory to the location where this program is saved on user's device and type 'python3 tic_tac_toe.py'. After this step, user has to choose a sign they want to use during the game and then, with every turn, user has to choose coordinates of the table field where they want to put their sign.
 
-If user uses windows device:
+If user uses Windows device:
 
 In order to use this program, user has to open tic_tac_toe.py file with Python IDE of their choice (for example Visual Studio Code) and run it (for example, you can run the file in Visual Studio Code by pressing a triangle on the top right side of the window). After this step, user has to choose a sign they want to use during the game and then, with every turn, user has to choose coordinates of the table field where they want to put their sign. 
 
-Alternatively, user can run this file using windows powershell - then, process of running the program is similar to running the program on linux device: user has to change directory to the location where this program is saved on their device and type 'python3 tic_tac_toe.py' into the terminal. After these steps, user can use this program.
+Alternatively, user can run this file using Windows Powershell - then, process of running the program is similar to running the program on linux device: user has to change directory to the location where this program is saved on their device and type 'python3 tic_tac_toe.py' into the terminal. After these steps, user can use this program.
 
 **Description of all program's variables:**
 

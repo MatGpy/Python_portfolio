@@ -8,15 +8,15 @@ Firstly, program randomly chooses the value of three integers - guessedNumber (n
 
 **How to use this program?**
 
-If user uses linux device:
+If user uses Linux device:
 
 In order to use this program, user has to open terminal, change directory to the location where this program is saved on user's device and type 'python3 number_guessing_game.py'. Then, user has to choose level of difficulty and inform the program whether they want a hint. After these steps, user has specified amount of attempts to guess value of the guessed number.
 
-If user uses windows device:
+If user uses Windows device:
 
 In order to use this program, user has to open number_guessing_game.py file with Python IDE of their choice (for example Visual Studio Code) and run it (for example, you can run the file in Visual Studio Code by pressing a triangle on the top right side of the window). Then, user has to choose level of difficulty and inform the program whether they want a hint. After these steps, user has specified amount of attempts to guess value of the guessed number.
 
-Alternatively, user can run this file using windows powershell - then, process of running the program is similar to running the program on linux device: user has to change directory to the location where this program is saved on their device and type 'python3 number_guessing_game.py' into the terminal. After these steps, user can use this program.
+Alternatively, user can run this file using Windows Powershell - then, process of running the program is similar to running the program on linux device: user has to change directory to the location where this program is saved on their device and type 'python3 number_guessing_game.py' into the terminal. After these steps, user can use this program.
 
 **Description of all program's variables:**
 
