@@ -57,12 +57,12 @@ def takeDifficultyLevel():
 
 def takeAttempt(displayedTable):
     attempt = str(input("Which field do you want to uncover? (type the answer in the following order - rc (r - row, c - column)) "))
-    if len(attempt) > 2:
+    if len(attempt) > 2 or attempt == "":
         raise ValueError
     while not displayedTable[int(attempt[0])][int(attempt[1])] == 'O':
         print("chosen field is already uncovered")
         attempt = str(input("Which field do you want to uncover? (type the answer in the following order - rc (r - row, c - column)) "))
-        if len(attempt) > 2:
+        if len(attempt) > 2 or attempt == "":
             raise ValueError
     return attempt
 

@@ -16,7 +16,7 @@ def checkIfVictory(table):
     
 def takeUserMove():
     userMove = str(input("Insert coordinates of the cell on the table where you would like to place 'X' (in a form of double digit number, where first digit is an number of row and second number is a number of column): "))
-    if int(userMove[0]) and int(userMove[1]) not in (1,2,3,4,5,6,7,8,9) or len(userMove) > 2:
+    if len(userMove) > 2 or userMove == "":
         raise ValueError
     return userMove
 
