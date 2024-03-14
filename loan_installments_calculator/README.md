@@ -52,7 +52,7 @@ Alternatively, user can run this file using Windows Powershell - then, process o
 | takePeriodOfPayment | This function takes user's preferred period of payment of their loan (in months). |
 | calculateTotalLoan | This function alculates total amount of user's loan (including bank commission). |
 | calculateInstallment | This function calculates amount of installment, based on loan amount, period of payment, interest rate and wibor rate. |
-| calculateAverage | This function calculates average installment for all months in the period of payment. |
+| calculateAverageInstallment | This function calculates average installment for all months in the period of payment. |
 | createTable | This function creates and displays the table with all dates of loan installment payments and amount of installment payments. |
 
 
