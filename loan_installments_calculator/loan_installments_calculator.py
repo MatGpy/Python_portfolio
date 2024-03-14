@@ -44,18 +44,18 @@ def calculateInstallment(totalLoanAmount, loanInterestRate, periodOfPayment):
     installment = (totalLoanAmount*((loanInterestRate+1)**periodOfPayment)*loanInterestRate)/(((loanInterestRate+1)**periodOfPayment)-1)
     return installment
 
-def calculateAverage(periodOfPayment, loanInterestRate, totalLoanAmount, wibor_rates, month):
+def calculateAverageInstallment(periodOfPayment, loanInterestRate, totalLoanAmount, wiborRates, month):
     i = 1
-    Installment = 0
+    installment = 0
     while i <= periodOfPayment:
-        Installment = Installment + calculateInstallment(totalLoanAmount, (loanInterestRate+(wibor_rates[month]/100))/12, periodOfPayment)
+        installment = installment + calculateInstallment(totalLoanAmount, (loanInterestRate+(wiborRates[month]/100))/12, periodOfPayment)
         i=i+1
         if month == 12:
             month = 1
         else:
             month = month+1
-    Installment = Installment/periodOfPayment
-    return Installment
+    installment = installment/periodOfPayment
+    return installment
 
 def createTable(periodOfPayment, days, months, day, month, year, installment):
     print("\n\n")
@@ -91,7 +91,7 @@ def main():
         loanInterestRate = takeLoanInterestRate()
         periodOfPayment = takePeriodOfPayment()
         totalLoanAmount = calculateTotalLoan(loanAmount, loanCommission)
-        installment = calculateAverage(periodOfPayment, loanInterestRate, totalLoanAmount, wiborRates, monthsReversed[userMonth])
+        installment = calculateAverageInstallment(periodOfPayment, loanInterestRate, totalLoanAmount, wiborRates, monthsReversed[userMonth])
         createTable(periodOfPayment, days, months, daysReversed[userDay], monthsReversed[userMonth], int(userYear), installment)
     except ValueError:
         print("Error: incorrect data in the input.")
