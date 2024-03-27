@@ -1,4 +1,4 @@
-**loan_installments_calculator - documentation.**
+**loan_installments_calculator.py - documentation.**
 
 This program's purpose is creating the table with payment plan for user's loan based on information such as amount of user's loan, interest rate, bank's commission and user's preferred period of payment (in months). Program calculates amount of every installment based on EMI formula (more information at the end of the documentation).
 
