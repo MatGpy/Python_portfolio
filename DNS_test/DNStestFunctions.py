@@ -61,7 +61,3 @@ def checkForMultipleRequests(DNSaddress, WebsiteDomain, DNSrecordType, expectedR
         return "Error: provided DNS record type is incorrect, missing, or doesn't exist."
     except (UnicodeError, OSError, AttributeError, socket.gaierror):
         return "Error: provided DNS address is incorrect or missing."
-
-#print(checkDNSresponse("8...4", " ", "A"))
-#print(checkDNSresponse("8.8.4.4", "yahoo.com", "D"))
-#print(checkForMultipleRequests("8.8.4.4", "x-kom.pl", ".", {'104.20.71.117', '104.20.72.117'}, 100))
